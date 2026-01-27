@@ -1,9 +1,14 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OXX Automotive</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --bg:#0b0f1a;
@@ -17,19 +22,22 @@
       --radius: 18px;
       --max: 1120px;
     }
+
     *{box-sizing:border-box}
+
     body{
-       .brandText{ display:flex; flex-direction:column; line-height:1.05; }
-.brandName{ font-weight:800; letter-spacing:1.2px; font-size:16px; }
-.brandTag{ font-weight:600; font-size:12px; color:var(--muted); letter-spacing:.2px; }
-  background: radial-gradient(1000px 600px at 10% 10%, rgba(95,167,255,.18), transparent 60%),
-              radial-gradient(900px 520px at 90% 20%, rgba(51,209,122,.16), transparent 60%),
-              var(--bg);
-  color:var(--text);
-  line-height:1.45;
-}
+      margin:0;
+      font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: radial-gradient(1000px 600px at 10% 10%, rgba(95,167,255,.18), transparent 60%),
+                  radial-gradient(900px 520px at 90% 20%, rgba(51,209,122,.16), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.45;
+    }
+
     a{color:inherit; text-decoration:none}
     .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+
     header{
       display:flex; align-items:center; justify-content:space-between;
       gap:16px;
@@ -39,32 +47,32 @@
       border-bottom:1px solid var(--stroke);
       z-index:10;
     }
+
     .brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  padding:10px 0;
-}
-
-.logo{
-  width:120px;
-  height:auto;
-  border-radius:0;
-  background:none;
-}
-
-
-      background: linear-gradient(135deg, var(--brand2), var(--brand));
-      box-shadow: 0 10px 28px rgba(95,167,255,.18);
-      display:grid; place-items:center; font-weight:900;
-      letter-spacing:.5px;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:10px 0;
     }
-   nav{
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-  justify-content:flex-end;
-}
+
+    .logo{
+      width:120px;
+      height:auto;
+      border-radius:0;
+      background:none;
+      display:block;
+    }
+
+    .brandText{ display:flex; flex-direction:column; line-height:1.05; }
+    .brandName{ font-weight:800; letter-spacing:1.2px; font-size:16px; }
+    .brandTag{ font-weight:600; font-size:12px; color:var(--muted); letter-spacing:.2px; }
+
+    nav{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
 
     nav a{
       padding:10px 12px;
@@ -73,6 +81,7 @@
       color:var(--muted);
     }
     nav a:hover{border-color:var(--stroke); color:var(--text)}
+
     .btn{
       display:inline-flex; align-items:center; gap:10px;
       padding:12px 16px;
@@ -82,19 +91,22 @@
       box-shadow: 0 10px 30px rgba(0,0,0,.25);
       cursor:pointer;
       font-weight:600;
+      transition: transform .12s ease;
     }
     .btn.primary{
       border-color: rgba(51,209,122,.35);
       background: linear-gradient(135deg, rgba(95,167,255,.20), rgba(51,209,122,.22));
     }
     .btn:hover{transform: translateY(-1px)}
+
     .hero{
       display:grid;
-      grid-template-columns: 1.15fr .85fr;
+      grid-template-columns: 1.1fr .9fr;
       gap:28px;
       padding:46px 0 18px;
       align-items:center;
     }
+
     .kicker{
       display:inline-flex; gap:10px; align-items:center;
       color:var(--muted);
@@ -107,6 +119,7 @@
     h1{font-size: clamp(34px, 4.1vw, 54px); margin:14px 0 10px; line-height:1.05}
     .lead{font-size: 18px; color:var(--muted); max-width: 55ch}
     .ctaRow{display:flex; gap:12px; flex-wrap:wrap; margin-top:20px}
+
     .card{
       background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
       border:1px solid var(--stroke);
@@ -114,9 +127,8 @@
       box-shadow: var(--shadow);
     }
     .heroCard{padding:18px}
-    .heroGrid{
-      display:grid; gap:12px;
-    }
+    .heroGrid{display:grid; gap:12px}
+
     .stat{
       padding:14px;
       border-radius: 16px;
@@ -125,15 +137,19 @@
     }
     .stat b{font-size:18px}
     .stat p{margin:6px 0 0; color:var(--muted); font-size:14px}
+
     section{padding:26px 0}
+
     .grid3{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
       gap:14px;
     }
+
     .feat{padding:18px}
     .feat h3{margin:10px 0 8px}
     .feat p{margin:0; color:var(--muted)}
+
     .pill{
       display:inline-block;
       font-size:12px;
@@ -143,6 +159,7 @@
       color:var(--muted);
       background: rgba(255,255,255,.02);
     }
+
     .products{
       display:grid;
       grid-template-columns: repeat(2, 1fr);
@@ -152,11 +169,13 @@
     .prod h3{margin:10px 0 6px}
     .prod ul{margin:10px 0 0; padding-left:18px; color:var(--muted)}
     .prod li{margin:6px 0}
+
     .twoCol{
       display:grid; grid-template-columns: 1fr 1fr;
       gap:14px;
       align-items:start;
     }
+
     form{display:grid; gap:10px; padding:18px}
     label{font-size:13px; color:var(--muted)}
     input, textarea, select{
@@ -170,6 +189,7 @@
     }
     textarea{min-height:110px; resize:vertical}
     .small{font-size:12px; color:var(--muted)}
+
     footer{
       border-top:1px solid var(--stroke);
       padding:18px 0 36px;
@@ -177,23 +197,40 @@
       font-size:14px;
     }
     .divider{height:1px; background:var(--stroke); margin:18px 0}
+
+    /* Hero image (frasco) */
+    .heroMedia{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    .productShot{
+      width:100%;
+      max-width:420px;
+      height:auto;
+      filter: drop-shadow(0 22px 45px rgba(0,0,0,.45));
+      transform: translateY(8px);
+    }
+
     @media (max-width: 920px){
-      .hero{grid-template-columns:1fr; padding-top:26px}
+      .hero{grid-template-columns:1fr; padding-top:26px; text-align:center}
       .grid3{grid-template-columns:1fr}
       .products{grid-template-columns:1fr}
       .twoCol{grid-template-columns:1fr}
       nav{display:none}
+      .productShot{max-width:300px; margin-top:18px}
     }
   </style>
 </head>
+
 <body>
   <header>
     <div class="wrap" style="display:flex; align-items:center; justify-content:space-between; gap:16px;">
       <div class="brand">
         <img src="images/logo-oxx-header.png" alt="OXX Automotive" class="logo">
-        <div>
-          <div style="font-weight:800; letter-spacing:3px;">OXX AUTOMOTIVE</div>
-          <div style="font-size:12px; color:var(--muted)">A revolução dos aditivos</div>
+        <div class="brandText">
+          <div class="brandName">OXX AUTOMOTIVE</div>
+          <div class="brandTag">A revolução dos aditivos</div>
         </div>
       </div>
 
@@ -225,7 +262,7 @@
         </div>
 
         <div class="divider"></div>
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
           <span class="pill">Alto poder de limpeza</span>
           <span class="pill">Rendimento</span>
           <span class="pill">Espuma controlada</span>
@@ -233,21 +270,9 @@
         </div>
       </div>
 
-      <div class="card heroCard">
-        <div class="heroGrid">
-          <div class="stat">
-            <b>⚙️ Foco em performance</b>
-            <p>Formulações pensadas para limpar com eficiência e padronizar o resultado do serviço.</p>
-          </div>
-          <div class="stat">
-            <b>🧪 Uso versátil</b>
-            <p>Aplicações em sujeira pesada, graxa, óleo, pré-lavagem e rotinas de estética.</p>
-          </div>
-          <div class="stat">
-            <b>📦 Atacado e varejo</b>
-            <p>Atendemos consumidor final e parceiros: estética, oficinas, distribuidoras e revendas.</p>
-          </div>
-        </div>
+      <!-- Troque a imagem abaixo pela foto do frasco da VCULVA (ex: images/vculva.png) -->
+      <div class="heroMedia">
+        <img src="images/vculva.png" alt="VCULVA - OXX Automotive" class="productShot">
       </div>
     </section>
 
@@ -376,7 +401,7 @@
         </p>
         <div class="ctaRow">
           <a class="btn primary" id="btnSideWhats" href="#" rel="noopener">Chamar no WhatsApp</a>
-          <a class="btn" href="mailto:contato@seudominio.com">contato@seudominio.com</a>
+          <a class="btn" href="mailto:contato@oxxautomotive.com.br">contato@oxxautomotive.com.br</a>
         </div>
         <div class="divider"></div>
         <p class="small" style="margin:0;">
@@ -399,11 +424,11 @@
 
   <script>
     // >>>> CONFIGURE AQUI <<<<
-    const WHATS_NUMBER = "5511968345227"; // ex: 55 + DDD + número (sem +, sem espaços) -> 5511987654321
+    const WHATS_NUMBER = "5511968345227"; // 55 + DDD + número (sem +, sem espaços)
     const BRAND_NAME = "OXX AUTOMOTIVE";
 
     function waLink(message){
-      return `https://wa.me/${5511968345227}?text=${encodeURIComponent(message)}`;
+      return `https://wa.me/${WHATS_NUMBER}?text=${encodeURIComponent(message)}`;
     }
 
     function baseMsg(extra=""){
@@ -418,6 +443,7 @@
       ["btnProd2", baseMsg("Quero orçamento do Desengraxante OXX.")],
       ["btnSideWhats", baseMsg("Pode me atender por aqui?")]
     ];
+
     links.forEach(([id, msg])=>{
       const el = document.getElementById(id);
       if(el) el.href = waLink(msg);
