@@ -8,6 +8,36 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+/* ================================
+   FUNDO COM FRASCO (MARCA D'ÁGUA)
+================================ */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(11,15,26,.88),
+      rgba(11,15,26,.92)
+    ),
+    url("images/vulc-bg.png");
+  background-repeat:no-repeat;
+  background-position: right 12% center;
+  background-size: min(520px, 55vw);
+  opacity: 0.18;              /* intensidade da marca d’água */
+  pointer-events:none;
+  z-index:-1;
+}
+
+/* Ajuste mobile */
+@media (max-width: 920px){
+  body::before{
+    background-position: center 120px;
+    background-size: 360px;
+    opacity: 0.12;
+  }
+}
 
   <style>
     :root{
